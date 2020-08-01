@@ -49,32 +49,32 @@ duuba duuba dom dom dou dum bou bum`;
           return line[0][0];
       }
     } else if (line[0][0] === "print_ascii" && line[0][1] === 0) {
-      console.log(runCode(line.slice(1)));
+      //console.log(runCode(line.slice(1)));
       output = output + String.fromCharCode(runCode(line.slice(1)));
       return 0;
     } else if (line[0][0] === "print" && line[0][1] === 0) {
-      console.log(runCode(line.slice(1)));
+      //console.log(runCode(line.slice(1)));
       output = output + runCode(line.slice(1));
       return 0;
     } else if (line[0][0] === "a" && line[1][0] === "=" && line[0][1] === 0) {
-      console.log("setA");
+      //console.log("setA");
       a = runCode(line.slice(2));
       return 0;
     } else if (line[0][0] === "b" && line[1][0] === "=" && line[0][1] === 0) {
-      console.log("setB");
+      //console.log("setB");
       b = runCode(line.slice(2));
       return 0;
     } else if (line[0][0] === "c" && line[1][0] === "=" && line[0][1] === 0) {
-      console.log("setC");
+      //console.log("setC");
       c = runCode(line.slice(2));
       return 0;
     } else if (line[0][0] === "d" && line[1][0] === "=" && line[0][1] === 0) {
-      console.log("setD");
+      //console.log("setD");
       d = runCode(line.slice(2));
       return 0;
     } else {
       if (line.length % 2 === 0) {
-        console.log("error");
+        //console.log("error");
         return "invalid";
       } else {
         switch (line[1][0]) {
@@ -83,7 +83,7 @@ duuba duuba dom dom dou dum bou bum`;
           case "-":
             return runCode(line.slice(0, 1)) - runCode(line.slice(2));
           case "*": {
-            console.log(runCode(line.slice(0, 1)) * runCode(line.slice(2)));
+            //console.log(runCode(line.slice(0, 1)) * runCode(line.slice(2)));
             return runCode(line.slice(0, 1)) * runCode(line.slice(2));
           }
           case "^":
